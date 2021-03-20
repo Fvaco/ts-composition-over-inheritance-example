@@ -5,6 +5,6 @@ export class Tab {
     this.name = tabName;
   }
   press() {
-    console.log(`Tab ${this.name} pressed`);
+    console.log(`👉 Tab '${this.name}' pressed`);
   }
 }
