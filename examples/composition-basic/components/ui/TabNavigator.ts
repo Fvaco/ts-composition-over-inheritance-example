@@ -5,10 +5,7 @@ type TabNavigatorTabs<T extends string> = {
 };
 
 export class TabNavigator<T extends string> {
-  private _tabs: TabNavigatorTabs<T>;
-  constructor(tabs: TabNavigatorTabs<T>) {
-    this._tabs = tabs;
-  }
+  constructor(protected _tabs: TabNavigatorTabs<T>) {}
   navigateTo(screenName: T) {
       this._tabs[screenName]!.press();
   }

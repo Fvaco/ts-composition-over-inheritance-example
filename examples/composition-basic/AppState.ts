@@ -7,11 +7,8 @@ const INITIAL_STATE = {
   touched: false
 };
 class AppState {
-  private _state: State;
   
-  constructor() {
-    this._state = INITIAL_STATE;
-  }
+  constructor(private _state: State = INITIAL_STATE) {}
 
   set state(newState: State) {
     console.info("Updating state...")
