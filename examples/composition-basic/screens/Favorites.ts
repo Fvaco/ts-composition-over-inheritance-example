@@ -1,16 +1,11 @@
-import { AppScreen, appState } from "../AppState.ts";
-import { TabNavigator } from "../components/TabNavigator.ts";
-import { IMainNavigationAware } from "../interfaces.ts";
+import { appState } from "../AppState.ts";
+import { AppScreen } from "../enums.ts";
 import { Screen } from "./Screen.ts";
 
-class Favorites extends Screen implements IMainNavigationAware {
-  public tabNavigator: TabNavigator;
-  
+class Favorites extends Screen {
   constructor() {
     super();
-    this.tabNavigator = new TabNavigator();
   }
-
   isDisplayed() {
     return appState.state.displayedScreen === AppScreen.Favorites;
   }

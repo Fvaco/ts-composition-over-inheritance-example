@@ -1,12 +1,4 @@
-
-export enum AppScreen {
-  Favorites = "favorites",
-  Dashboard = "dashboard"
-}
-export enum MainNavigationScreen {
-  Favorites = AppScreen.Favorites,
-  Dashboard = AppScreen.Dashboard
-}
+import { AppScreen } from "./enums.ts";
 
 export type State = typeof INITIAL_STATE;
 

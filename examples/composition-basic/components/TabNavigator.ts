@@ -1,8 +1,8 @@
-import { MainNavigationScreen } from "../AppState.ts";
+import { MainNavigationAppScreen } from "../enums.ts";
 import { Tab } from "./Tab.ts";
 
 export type TabNavigatorTabs = {
-  [key in MainNavigationScreen]?: Tab;
+  [key in MainNavigationAppScreen]?: Tab;
 };
 
 enum MainNavigationTabName {
@@ -14,11 +14,11 @@ export class TabNavigator {
   private tabs: TabNavigatorTabs;
   constructor() {
     this.tabs = {
-      [MainNavigationScreen.Favorites]: new Tab(MainNavigationTabName.FavoritesTab),
-      [MainNavigationScreen.Dashboard]: new Tab(MainNavigationTabName.DashboardTab),
+      [MainNavigationAppScreen.Favorites]: new Tab(MainNavigationTabName.FavoritesTab),
+      [MainNavigationAppScreen.Dashboard]: new Tab(MainNavigationTabName.DashboardTab),
     };
   }
-  tapOn(tabName: MainNavigationScreen) {
+  navigateTo(tabName: MainNavigationAppScreen) {
     this.tabs[tabName]!.press();
   }
 }

@@ -1,16 +1,17 @@
-import {AppScreen, appState} from './AppState.ts'
-import Dashboard from './screens/Dashboard.ts'
-import Favorites from './screens/Favorites.ts'
+import { MainNavigationAppScreen } from "./enums.ts";
+import Dashboard from "./screens/Dashboard.ts";
+import Favorites from "./screens/Favorites.ts";
+import { Screen } from "./screens/Screen.ts";
+import { isMainNavigationScreen } from "./screens/utils/isMainNavigationScreen.ts";
+
+const arrayOfScreens: Screen[] = [Dashboard, Favorites];
 
 const useScreens = (): void => {
-  const oldState = appState.state;
-  console.log('Dashboard is displayed', Dashboard.isDisplayed());
-  console.log('Favorites is displayed', Favorites.isDisplayed());
-  console.log('Dashboard is displayed', Dashboard.isDisplayed());
-  console.log('Favorites is displayed', Favorites.isDisplayed());
-  const newState = appState.state;
-  console.log(oldState === newState);
-
+  for (const aScreen of arrayOfScreens) {
+    if (isMainNavigationScreen(aScreen)) {
+      aScreen.tabNavigator.navigateTo(MainNavigationAppScreen.Dashboard);
+    }
+  }
 };
 
 useScreens();
