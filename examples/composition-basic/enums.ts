@@ -2,9 +2,6 @@ export enum AppScreen {
   Favorites = "favorites",
   Dashboard = "dashboard",
   Messages = "messages",
+  Profile = "profile",
 }
 
-export enum MainNavigationAppScreen {
-  Favorites = AppScreen.Favorites,
-  Dashboard = AppScreen.Dashboard
-}

@@ -4,7 +4,7 @@ import { AppScreen } from "../enums.ts";
 import { IMainNavigationAware } from "../interfaces.ts";
 import { Screen } from "./Screen.ts";
 
-class Dashboard extends Screen implements IMainNavigationAware {
+class Messages extends Screen implements IMainNavigationAware {
   private _tabNavigator: AppTabNavigator;
   constructor() {
     super();
@@ -19,4 +19,4 @@ class Dashboard extends Screen implements IMainNavigationAware {
   }
 }
 
-export default new Dashboard();
+export default new Messages();

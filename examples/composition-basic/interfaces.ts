@@ -1,5 +1,5 @@
-import { TabNavigator } from "./components/TabNavigator.ts";
+import { AppTabNavigator } from "./components/AppTabNavigator.ts";
 
 export interface IMainNavigationAware {
-  tabNavigator: TabNavigator;
+  tabNavigator: AppTabNavigator;
 }
