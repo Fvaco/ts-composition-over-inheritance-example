@@ -12,7 +12,10 @@ class AppState {
 
   set state(newState: State) {
     console.info("Updating state...")
-    this._state = newState;
+    this._state = {
+      ...this.state,
+      ...newState
+    };
   }
   get state() {
     return this._state;
