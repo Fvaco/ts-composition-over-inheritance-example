@@ -4,6 +4,4 @@ import { Screen } from "./screens/Screen.ts";
 export type MainNavigationAppScreen = AppScreen.Dashboard | AppScreen.Messages;
 
 
-export type Constructor<T = {}> = new (...args: any[]) => T;
-
-export type HasTabNavigator = Constructor<Screen>;
+export type Constructor = new (...args: any[]) => {};

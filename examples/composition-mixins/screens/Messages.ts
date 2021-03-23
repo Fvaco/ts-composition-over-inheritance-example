@@ -12,9 +12,9 @@ class Messages extends Screen {
   }
 
   isDisplayed() {
-    return appState.state.displayedScreen === AppScreen.Dashboard;
+    return appState.state.displayedScreen === AppScreen.Messages;
   }
 }
 
-applyMixins(Messages, [MainNavigationAware])
-export default new Messages()
+applyMixins(Messages, [ MainNavigationAware ]);
+export default new Messages();
