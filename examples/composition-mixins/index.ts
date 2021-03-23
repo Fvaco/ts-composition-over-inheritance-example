@@ -8,7 +8,7 @@ import { isMainNavigationScreen } from "./screens/utils/isMainNavigationScreen.t
 const arrayOfScreens: Screen[] = [Dashboard, Favorites, Messages];
 
 const useScreens = (): void => {
-  console.log(Messages.tabNavigator);
+  console.log(Messages);
   for (const aScreen of arrayOfScreens) {
     const screenClassName = aScreen.constructor.name || "an unknown";
     console.group(`🔎 Checking ${screenClassName} screen...`);

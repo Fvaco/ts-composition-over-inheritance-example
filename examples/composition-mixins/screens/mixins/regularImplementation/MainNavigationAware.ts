@@ -1,5 +1,5 @@
 import { AppTabNavigator } from "../../../components/AppTabNavigator.ts";
-import { Constructor } from "../../../types.ts";
+import { Constructor, MainNavigationAppScreen } from "../../../types.ts";
 
 export function MainNavigationAware<TBase extends Constructor>(Base: TBase) {
   return class extends Base {
@@ -12,6 +12,11 @@ export function MainNavigationAware<TBase extends Constructor>(Base: TBase) {
 
     get tabNavigator() {
       return this._tabNavigator;
+    }
+
+    // you could implement/overwrite other methods such as...
+    navigateTo(mainScreen: MainNavigationAppScreen) {
+      return this.tabNavigator.navigateTo(mainScreen);
     }
   };
 }

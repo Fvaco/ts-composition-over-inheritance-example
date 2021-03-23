@@ -1,13 +1,13 @@
 import { AppTabNavigator } from "../../../components/AppTabNavigator.ts";
+import { MainNavigationAppScreen } from "../../../types.ts";
 
 export class MainNavigationAware {
-  private _tabNavigator: AppTabNavigator;
-
-  constructor() {
-    this._tabNavigator = new AppTabNavigator();
+  get tabNavigator() {
+    return new AppTabNavigator();
   }
 
-  get tabNavigator() {
-    return this._tabNavigator;
+  // you could implement/overwrite other methods such as...
+  navigateTo(mainScreen: MainNavigationAppScreen) {
+    return this.tabNavigator.navigateTo(mainScreen);
   }
 }
