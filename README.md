@@ -12,7 +12,7 @@ using an approach based on inheritance.
 
 ## File extensions on imports
 
-This project is created to be used with Deno, that's why all imports must include the file extension.
+This project is created with Deno in mind, that's why all imports must include the file extension.
 
 ```ts
 import { Screen } from './Screen'; // ES6 regular import
