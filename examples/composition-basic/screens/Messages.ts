@@ -15,7 +15,7 @@ class Messages extends Screen implements IMainNavigationAware {
   }
 
   isDisplayed() {
-    return appState.state.displayedScreen === AppScreen.Dashboard;
+    return appState.state.displayedScreen === AppScreen.Messages;
   }
 }
 
